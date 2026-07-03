@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            선택자 = 요소를 선택
+            선택자 {
+                속성 = 값;
+                }
+        */
+        #number {
+        width: 300px;
+        height: 200px;
+        }
+        label{
+                display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>입력양식</h1>
+    <!--
+        form : 서버에 데이터를 전달 하기 위해서 사용
+
+        action : 요청하려는 페이지의 주소
+        method : 요청방식 (get 디폴트값, post)
+        name : 자바스크립트로 폼을 제어하기 위해서 사용
+    -->
+    <form action="LoginAction.html" method="get"
+        name="LoginForm" target="_self">
+        id : <input type="text" name="id" minlength="4" maxlength="9"
+        placeholder="아이디"><br>아이디는 4자이상 9자 이하로 작성 가능 <br>
+        pw : <input type="password" name="pw" required
+        placeholder="비밀번호"><br>
+        
+        <!--버튼의 종류-->
+        <input type="button" value="로그인">
+        <!--
+            form태그의 action속성을 서버에 요청
+            method속성에 정의된 방식으로
+            (만약 지정하지 않았다면 기본값인 get방식)
+            
+            
+        -->
+        <input type="submit" value="서브밋">
+        <input type="reset" value="리셋">
+        
+    </form>
+    <hr>
+    <h1>입력양식 종류</h1>
+    <form action="LoginAction.html">
+        <fieldset>
+            <legend>리그오브</legend>
+            <!--
+            label 폼 요소에 이름을 붙일 떄 사용-->
+
+            <label for="test">
+                text=     
+            </label>
+            
+            
+           
+            
+            <input id="test" type="text" placeholder="텍스트"><br>
+            <label for="2">password=</label>
+            <input id="2" type="password" name="" id="" placeholder="비밀번호"><br>
+            <label for="3">search=</label>
+            <!-- 입력창에 x 버튼을 출력-->
+            <input id="3"type="search" name="" id="" placeholder="서치"><br>
+            <!-- http://, http:// 문자가 있는지 체크-->
+              <label for="4">url=</label>
+            <input id="4" type="url" name="" id="" placeholder="url"><br>
+            <!-- 이메일 형식 체크-->
+            <label for="5">email=</label>
+            <input id="5"type="email" name="" id="" placeholder="email"><br>
+            
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>체크 라디오</legend>checkbox= 
+            <input type="checkbox" name="안녕 신기하넹" id="" value="1">축구
+            <input type="checkbox" name="안녕 신기하넹" id="" value="2">농구
+            <input type="checkbox" name="안녕 신기하넹" id="" value="3">야구
+            <input type="checkbox" name="안녕 신기하넹" id="" value="4">배구
+            <input type="checkbox" name="안녕 신기하넹" id="" value="5">구구<br>
+            성별 
+            <input type="radio" name="gender" value="1" id="">남
+            <input type="radio" name="gender" value="1" id="">여<br>
+            number<input type="number" name="number" id="number"
+                     max="100" min="1" step="10">나와
+        </fieldset>
+        
+        <!-- 
+            name 속성으로 묶어주고
+            선택된 value 속성의값이 서버에 전달
+
+            체크박스 - 다중선택
+            레디오 - 단일 선택
+        -->
+
+
+        <hr>
+
+        submit= <input type="submit" value="가입" ><br>
+
+
+
+    </form>
+</body>
+</html>
