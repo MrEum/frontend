@@ -6,10 +6,16 @@
     <title>Document</title>
     <style>
         /* 
-            선택자 = 요소를 선택
-            선택자 {
-                속성 = 값;
-                }
+        선택자를 이용해서 요소를 선택하고 중괄호 안에 스타일을 정의 한다.
+        선택자 : 요소를 선택
+                 #아이디
+        선택자 {
+            속성 : 값;
+            속성 : 값;
+            width : 30px;
+            height : 20px;
+        }
+        
         */
         #number {
         width: 300px;
@@ -23,11 +29,11 @@
 </head>
 <body>
     <h1>입력양식</h1>
-    <!--
+    <!-- 
         form : 서버에 데이터를 전달 하기 위해서 사용
 
-        action : 요청하려는 페이지의 주소
-        method : 요청방식 (get 디폴트값, post)
+        action : 요청 하려는 페이지의 주소
+        method : 요청방식 (get-기본값, post)
         name : 자바스크립트로 폼을 제어하기 위해서 사용
     -->
     <form action="LoginAction.html" method="get"
@@ -42,9 +48,20 @@
         <!--
             form태그의 action속성을 서버에 요청
             method속성에 정의된 방식으로
-            (만약 지정하지 않았다면 기본값인 get방식)
-            
-            
+            (만약 지정하지 않았다면 기본값인 get방식) 
+            http://127.0.0.1:5500/html/loginAction.html?id=aa&pw=bb
+
+            프로토콜(통신규약)  http://
+            ip                127.0.0.1
+            port              :5500
+            경로               /html/loginAction.html
+            쿼리스트링         ?id=aa&pw=bb
+                               name 속성의 값 = 입력필드에 입력된 값
+
+            데이터가 넘어가지 않는경우
+                name 속성이 있는지
+                form 태그로 감싸져 있는지
+
         -->
         <input type="submit" value="서브밋">
         <input type="reset" value="리셋">
@@ -56,8 +73,12 @@
         <fieldset>
             <legend>리그오브</legend>
             <!--
-            label 폼 요소에 이름을 붙일 떄 사용-->
+            label - 폼 요소에 이름을 붙일 때 사용
+            for속성을 이용해서 요소와 연결 
+            for = "요소의 아이디"
 
+            레이블을 선택하면 입력요소의 커서가 들어간다
+            -->
             <label for="test">
                 text=     
             </label>
@@ -81,7 +102,14 @@
         </fieldset>
         <hr>
         <fieldset>
-            <legend>체크 라디오</legend>checkbox= 
+            <legend>체크 라디오</legend>
+            <!--
+                name 속성으로 묶어주고
+                선택된 value 속성의값이 서버에 전달 
+                
+                체크박스 - 다중선택 (name으로 묶인 그룹에서 여러개의 항목을 선택)
+                라디오버튼 - 단일선택 (name으로 묶인 그룹에서 하나의 항목을 선택)
+            -->checkbox= 
             <input type="checkbox" name="안녕 신기하넹" id="" value="1">축구
             <input type="checkbox" name="안녕 신기하넹" id="" value="2">농구
             <input type="checkbox" name="안녕 신기하넹" id="" value="3">야구
