@@ -1,0 +1,45 @@
+/*
+    css 선택자
+
+    요소를 선택하는 3가지 방법
+    class     :.  
+    id        : #
+    tag name  : 태그이름
+
+    선택자 {
+        스타일 속성을 적용
+    }
+
+    컨텐츠 - 패딩 - 보더 - 마진
+*/
+p{
+    background-color: aquamarine;
+    border: 1px solid #111;
+    padding: 10px;
+    border-radius: 100px;
+    color: navy;
+}
+
+input::placeholder{
+    color: blue;
+}
+
+/*
+class를 이용해서 요소에 스타일을 적용
+1. 스타일 정의
+2. 요소의 class속성에 값을 입력
+*/
+.red{
+    color: red;
+}
+
+#name{
+    color: blueviolet;
+
+}
+*{
+    margin: 0px;
+}
+p{
+    background-color: blue;
+}
