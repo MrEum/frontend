@@ -9,7 +9,11 @@ a{
     text-decoration: none;
     color: #222;
 }
-
+.badge_plus{
+    position: absolute;
+    top: -6px;
+    right: -2px;
+}
 .badge{
     /* 
     position 속성
