@@ -130,6 +130,7 @@ body {
     position: absolute;
     width: 100%;
     text-align: center;
+    font-weight: 700;
 }
 .carousel p:first-of-type{
     bottom: 25px;
