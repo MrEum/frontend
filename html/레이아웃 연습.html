@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+
+        }
+        header{
+            width: 100%;
+            height: 400px;
+            background-color: aqua;
+        }
+        main{
+            width: 100%;
+            height: 200vh;/*vh=창의 높이 vw=창의 너비*/ 
+            background-color: bisque;
+        }
+        footer{
+            width: 100%;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .banner{
+            height: 50px;
+            line-height: 50px;
+            background-color: blue;
+            color: brown;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .flexbox{
+            display: flex;
+            justify-content: end;
+
+        }
+        .quickmenu_item{
+            width: 100px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: brown;
+        }
+        .quickmenu a{
+            padding: 20px 20px;
+        }
+        .logo_item{
+            text-align: right;
+            font-size: 1rem;
+            height: 100%;
+            
+        }
+        .logo_item i{
+            padding: 20px 10px;
+        }
+        .logo{
+            border: 1px solid;
+            height: 100%;
+            background: url(https://image.fnnews.com/resource/media/image/2026/03/18/202603181001293799_l.jpg) no-repeat center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+                <div class="banner">🤢 구와아아악 🤢</div>
+                <div class="quickmenu flexbox">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                    <a href="">마이샵</a>
+                    <a href="">커뮤니티</a>
+                    <a href="">😈kr</a>
+                </div>
+                <!-- <div class="quickmenu">
+                    <ul class="flexbox">
+                        <li class="quickmenu_item">로그인</li>
+                        <li class="quickmenu_item">회원가입</li>
+                        <li class="quickmenu_item">마이샵</li>
+                        <li class="quickmenu_item">커뮤니티</li>
+                        <li class="quickmenu_item">😈KR</li>
+                    </ul>
+                </div> -->
+                <div class="logo">
+                    <div class="logo_item">
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-door-open"></i>
+                        <i class="bi bi-bag-plus"></i>
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </div>
+                </div>
+        </header><!--헤더: 로고 퀵메뉴  -->
+        <main></main><!--메인: 서비스  -->
+        <footer></footer><!--footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플랙스박스</title>
+    <style>
+        .container{
+            
+            display: flex;/* 축을 기준으로 배치  */
+            /* flex-direction: column-reverse;축을 지정기본값 :row  */
+            align-items: center;/*교차축정렬 */
+            justify-content: space-around;/*주축정렬 */
+            border: 1px solid black;
+            flex-flow: wrap;/*요소를 여러줄에 표현*/
+
+        }
+        .box{
+            display: flex;
+            border: 1px solid rebeccapurple;
+            width: 400px;
+            height: 200px;
+        }
+        .box_img{
+            width: 30%;
+            height: 100%;
+            background-color: cadetblue;
+        }
+        .box_text{
+            width: 70%;
+            height: 100%;
+            background-color: khaki;
+        }
+        .box_img img{
+            width: 100%;
+            border-radius: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box_img"><img src="img/summer.png" alt=""></div>
+            <div class="box_text">
+                <p>콘니찌와</p>
+                <p>르 풩쎄</p>
+            </div>
+        </div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+
+    </div>
+</body>
+</html>
