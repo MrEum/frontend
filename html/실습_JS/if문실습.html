@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const movieTitle = "모모노케 히메"
+        const movieGenre = "장르"
+        const movieRating = "89"
+        
+        if(movieRating >= 9.0){
+            console.log("명작")
+        }
+        else if(movieRating >= 7.0){
+            console.log("볼만함")
+        }
+        else {
+            console.log("비추")
+            
+        }
+
+        const ratingBadge = movieRating ? `⭐ ${movieRating}` : "아";
+        console.log(`${movieTitle} ${ratingBadge}`);
+    </script>
+</body>
+</html>

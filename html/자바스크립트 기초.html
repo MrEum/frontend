@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("응태그 상단", document.querySelector("h1"))
+    </script>
+</head>
+<body>
+    <h1>자바스크륍</h1>
+    <!-- 위치
+        스크립트가 실행되기전에 화면에 요소가 그려져야 요소를 선택할 수 있다
+    -->
+    <script>
+        // 한줄 주석
+        /*여
+        러
+        줄 
+        주석*/
+        console.log("콘솔창에 출력")
+        // 선택자를 이용해서 화면에 있는 요소 선택
+        // document.querySelector("선택자")
+        console.log("바디태그 상단", document.querySelector("h1"))
+        
+        // 변수 선언
+        // 지정된 값에 따라서 타입이 결정되는 언어
+        // var, let, const
+        // var : 함수단위의 유효 범위, 재선언 - 위험, 재할당 가능
+        // 변수의 타입은 리터럴에 의해서 결정된다
+
+        var a=1; var b=2; var a=3;
+        // 블록{}단위의 스코프, 재선언 불가능, 재할당 가능
+        let c=1; c=2; 
+        const d=1;
+
+        // 키워드 없이 변수를 만들면 전역변수
+        e="저녁이"
+        
+        // 타입읋 확인하는 방법
+        typeof(a)
+        typeof("안녕")
+
+        // 자료형 : 리터럴에 의해 결정
+        // 문자열, 숫자, boolean, function, object
+        // boolean : 참과 거짓을 나타냄
+
+        let h1 = document.querySelector("h1");
+        let name='이름';
+        h1.innerText - name;
+
+        /*
+        // 제어문 (if/switch)/ 반복문 (for/while/do-while)
+
+        제어문 : 조건에 따라 코드블럭을 실행
+
+        조건식 결과는 boolean이므로
+        안에 boolean타입의 값을 작성 가능
+
+        if(조건문){
+            조건이 참이면 실행
+        }
+
+        if(조건문){
+            조건이 참이면 실행
+        } else{
+            조건이 거짓이면 실행
+        }
+
+        if(조건문){
+            조건이 참이면 실행
+        } else if(조건문){
+            조건이 참이면 실행 
+        } else{
+            거짓이면 실행 
+        }
+
+
+        */
+       if(true){
+            console.log(" 참이면 실행 ")
+       }
+       
+       if(1==2){
+            console.log(" 참이면 실행 ")
+       }
+
+
+        // 9.0 이상 이면 명작
+        // 7.0 이상이면 볼만함
+        // 그외 비추
+        let rating = 9.0;
+        if(9.0 <= rating){
+            console.log("마스터피스")
+        }else if(raring <= 7.0){
+            console.log("볼만")
+        }else{
+            console.log("비추")
+        }
+
+        // prompt(매개변수, 파라메터)
+        // prompt : 웹브라우저로 부터 사용자의 입력을 받아 올떄 사용
+        // 사용자의 입력값을 반환
+        // 반환값을 변수의 저장
+        let kor = 90; //prompt('국어시험 점수');
+        let eng = 70;
+        let avg = (kor+eng)/2;
+        console.log(kor);
+        if(kor >= 90){
+            console.log("A", "합격")
+        }else if(kor >= 80){
+            console.log("B", "합격2")
+        }
+        else if(kor >= 70){
+            console.log("c", "턱걸이")
+        }
+        else{
+            console.log("D", "불합격")
+        }
+        /* 1. 점수를 학점으로 변환해서 출력
+            >= 90 A
+            >= 80 B
+            >= 70 C
+            >= 60 D
+
+            2. 조건을 여러개 주는 방법( 논리연산자 && || )
+            평균을 구해서 합격/불합격 
+                과목별 40이하는 불합격
+            영어시험 점수 받고 평균이 80 이상 이면 합격
+        */ 
+        if(kor > 40 && eng > 40 && avg >= 80){
+            console.log(`${avg}합격입니다`);
+        }else{
+            console.log(`${avg}불합격입니다`)
+        }
+        /*
+        3. 삼항연산자
+        조건 ? 참일떄 반환값 : 거짓일때 반환값
+        */
+        let res = (kor >= 90) ? "합격" : "불합격";
+        console.log(`${kor}은 ${res}입니다`)
+
+        /*
+            😴falsy한 값
+            조건문에서 데이터가 유효한지 검사할떄 사용
+            js 조건문 에서 false로 평가 받는 값 
+            false, 0, "", null, undefined, NaN
+        */
+       if(kor){
+        console.log("falsy하지 않은 값은 true로 처리됩니다");
+       }
+
+
+    </script>
+    <!-- 자바스크립트 외부문서를 연결하는 방법 -->
+    <script src="/JS/main.js"></script>
+</body>
+</html>
