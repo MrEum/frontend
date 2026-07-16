@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로또 생성기</h1>
+    <button class="lotto_btn">로또!</button>
+    <div class="box"> </div>
+    <script>
+        
+        let lotto_btn = document.querySelector(".lotto_btn");
+
+        lotto_btn.addEventListener( 'click' ,
+            function () {
+                make_lotto();
+            }
+        );
+
+
+        // 로또를 만들고 출력하는 기능
+        function make_lotto(){
+            /* 
+            로또 만들기
+            1. 무작위수 추출
+                Math.random() : 0 ~ 1 사이의 무작위 수를 추출 
+                범위를 잡아준다 (* 범위 + 1)
+            2. 배열에 저장할 경우 중복이 발생하는 문제가 있음
+            3. Set : 중복 허용 하지 않음!
+            4. 6개의 임의의 수를 추출해서 저장하고 출력하세요
+            */
+            let lotto = new Set();
+            // lotto.size : 요소의 갯수
+            // while ( 조건 ) : 조건이 참이면 실행
+            // lotto.size < 6
+            while(true){
+                // 형변환 parseInt : 정수부분만 추출
+                let num = parseInt( Math.random() * 45 + 1 ) 
+                lotto.add(num);
+                // break를 이용해서 탈출
+                
+                if(lotto.size == 6) {
+                    break;
+                }
+            }
+
+            // 로또번호를 화면에 출력
+            console.log("box", document.querySelector(".box") );
+            // querySelector : 선택자를 이용해서 화면에 있는 요소를 1개 선택
+            let box = document.querySelector(".box");
+            lotto.forEach(
+                (item, idx)=>{
+                    console.log(item);
+                    box.innerHTML += item + " ";
+                }
+            );
+            // 반복문이 끝나면 줄바꿈
+            box.innerHTML += "<br>";
+
+
+        }
+        
+        
+        
+         
+    </script>
+    
+</body>
+</html>
