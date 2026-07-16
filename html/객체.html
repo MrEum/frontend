@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>객체 </h1>
+    <script>
+        /*
+        titles 배열에 서로 다른 영화 제목 6개를 담는다
+        ratings 배열에 각 영화의 평점 6개를 같은 순서로 담는다 (그중 1개는 null — 개봉 예정작)
+        for문으로 `제목 - 평점` 형태로 6줄을 출력한다 (null이면 삼항연산자로 "개봉 예정" 표시)
+        */
+        const titles  = ["도시의 밤", "파랑의 계절", "스텔라 오디세이",
+                         "마지막 항해", "여름의 문", "은하수 특급"];
+        const ratings = [9.8, 9.5, 9.2, 9.0, 8.7, null]; 
+
+        titles.forEach(
+            (item, idx) => {
+
+                ratings[idx] == null ? "개봉 예정": ratings[idx]; 
+                console.log(`${item} - ${ratings[idx] == null ? "개봉 예정": ratings[idx]}`);
+            }
+        );
+
+        run();
+        
+        //익명의 함수
+        let 익명 = () => {
+            console.log("작업 완료");
+        }
+        익명();
+        function run(빠꾸=익명){
+            console.log(빠꾸);
+            빠꾸();
+
+        }
+
+        // 함수를 매개변수로 전달 하는 방법 !!!
+        // 1. 익명의 함수로 전달
+        run(
+            ()=>{
+                console.log("작완")
+            }
+        )
+        // 2. 변수로 전달
+        run(익명);
+
+        // 객체 : 데이터와 기능의 집합
+        // 속성은 키와 값으로 이루어져 있다
+        // {키 : '값', ...}
+        // 문자열인 경우 키는 그냥 작성, 값은 문자열 처리 
+        let movie = {
+            title : "스텔라 오디세이",
+            genre : "SF 액션",
+            rating : 9.2,
+            play : function(){
+                console.log(this.title + "재생");
+            }
+        }
+        
+        // 객체의 속성을 호출 
+        // 1. 이름 . 으로 접근
+        movie.title
+        // 2. ['속성명'] 으로 접근 : 속성명을 모르는 경우, 속성명에 띄어쓰기가 있는 경우
+        movie['title']
+
+        // for in : 객체인 경우 객체가 가지고 있는 속성의 키값을 꺼내옵니다 
+        for(key in movie){
+            console.log(key); // 키 출력
+            console.log(movie[key]); // 값 출력
+        }
+
+        let movie_str = JSON.stringify(movie) // Json형식의 문자열로 변환
+        let obj = JSON.parse(movie_str) // Json형식의 문자열 -> js object로 변환
+    </script>
+</body>
+</html>
