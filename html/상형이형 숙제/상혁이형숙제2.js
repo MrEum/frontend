@@ -128,7 +128,44 @@ DOM 조작은 querySelector()와 innerHTML을 사용하세요.
 find(), filter(), map(), forEach()는 사용하지 마세요.
 */
 
+const contentName = document.querySelector(".content1");
 
+let userName = "<h2> 전체 회원 목록 </h2>";
+
+for (let i = 0; i < userListIndex.length; i++){
+  userName += `<div>${userListIndex[i].id}</div>`; 
+}
+
+contentName.innerHTML = userName;
+
+const contentOld = document.querySelector(".content2");
+
+let userOld = "<h2> 회원 나이 확인 </h2>";
+
+for(let i = 0; i < userListIndex.length; i++){
+  if(userListIndex[i].age >= 20){
+    userOld += `<div>성인</div>`
+  }
+  else{
+    userOld +=`<div>미자</div>`
+  }
+}
+
+contentOld.innerHTML = userOld;
+
+const contentVip = document.querySelector(".content3");
+
+let userVip = "<h2> 우수회원 목록 </h2>";
+let userVipCount = 0;
+
+for(let i = 0; i < userListIndex.length; i++){
+  if(userListIndex[i].point >= 3000){
+    userVip += `<div>${userListIndex[i].id} : ${userListIndex[i].point}점</div>`;
+    userVipCount++;
+  }
+}
+let countVip = `<div>우수회원수 : ${userVipCount}명 </div> `
+contentVip.innerHTML = userVip + countVip;
 
 
 
